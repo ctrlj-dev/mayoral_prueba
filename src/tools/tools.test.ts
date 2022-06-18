@@ -44,7 +44,7 @@ describe('Tests for roundToTwo function. ', () => {
 })
 
 describe('Tests for checkDiscountExist function. ', () => {
-    test('Should check that product object have property discount, call calculateDiscount with price equal to 18.99 and discount equal to 20, and calculate final price, that should be equal to 15.191999999999998', () => {
+    test('Should check that product object have property discount, with price equal to 18.99 and discount equal to 20, and calculate final price, that should be equal to 15.191999999999998', () => {
         // Arrange
         const product: IProduct = {
             "id": 0,
@@ -59,11 +59,8 @@ describe('Tests for checkDiscountExist function. ', () => {
             "featuredImg": "https://json.ctrlj.es/mayoral/img/polo-azul-marino.jpg"
         };
         // Act
-        const calculateDiscount = jest.spyOn(tools, "calculateDiscount")
         const result = tools.checkDiscountExist(product)
         // Assert
-        expect(calculateDiscount).toHaveBeenCalled();
-        expect(calculateDiscount).toHaveBeenCalledWith(product.price, product.discount);
         expect(result).toEqual(15.191999999999998)
     })
 })
