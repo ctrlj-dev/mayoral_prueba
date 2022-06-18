@@ -64,7 +64,7 @@ Para la llamada a la API se ha separado en un archivo aparte, en la carpeta serv
 como las imágenes de las camisetas están subidas en un servidor privado, para simular al máximo posible una llamada real.
 Como tan solo había una llamada, simplemente se ha usado fecth. 
 
-## interfaces 📦
+## Interfaces 📦
 
 Las interfaces y enumerados usados se encuentran en la carpeta models.
 

@@ -64,11 +64,11 @@ For the API call, it has been separated in a separate file, in the services fold
 as well as the images of the T-shirts are uploaded on a private server, to simulate as much as possible a real call.
 Since there was only one call, we simply used fecth. 
 
-## interfaces 📦
+## Interfaces 📦
 
 The interfaces and enumerations used are in the models folder.
 
-## tweaks to the configuration 🛠️
+## Tweaks to the configuration 🛠️
 
 I have made some tweaks in the configuration files, for example in jest.config.js due to problems when launching tests.
 
