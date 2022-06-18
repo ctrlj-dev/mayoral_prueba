@@ -1,0 +1,29 @@
+@import "../../../styles/variable.scss";
+
+.selectSortFilterContainer {
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    background: url(../../../../public/img/arrow-down-sign-to-navigate-svgrepo-com.svg) no-repeat;
+    background-color: #f3f3f3;
+    background-position: 95% 54%;
+    background-size: 15px;
+    display: inline-block;
+    position: relative;
+
+    select {
+        width: 100%;
+        padding: 8px 30px 8px 10px;
+        border-radius: 4px;
+        color: $lightGray;
+        border: none;
+        background: transparent;
+        -webkit-appearance: none;
+        &:hover,
+        &:focus-visible {
+            outline: none;
+            background: transparent;
+            color: black;
+            border: 1px solid $mainColor;
+        }
+    }
+}

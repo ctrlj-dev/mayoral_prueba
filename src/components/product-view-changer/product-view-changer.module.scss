@@ -1,0 +1,31 @@
+@import '../../styles/variable.scss';
+
+
+.productViewChangerContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    @media #{$m992} {
+        justify-content: flex-end;
+    }
+    button {
+        padding: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+
+            rect {
+                fill: #e1e0df;
+            }
+
+            &:hover {
+                rect {
+                    fill: $mainColor;
+                }
+            }
+        }
+    }
+}

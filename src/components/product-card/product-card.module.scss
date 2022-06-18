@@ -1,0 +1,132 @@
+@import '../../styles/variable.scss';
+
+
+.productCard {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 5px;
+    font-size: $medium-font-size;
+    text-align: center;
+    margin-bottom: 15px;
+    color: $gray;
+
+    &.moreProductView {
+        flex: 0 0 33%;
+        max-width: 33%;
+
+        @media #{$m992} {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+
+        .productCardBody {
+            @media #{$max320} {
+                height: 135px;
+            }
+        }
+
+        button {
+            @media #{$max320} {
+                padding: 10px 5px;
+            }
+        }
+    }
+
+    &.lessProductView {
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        @media #{$m992} {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    @media #{$m992} {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .productCardContainer {
+        padding: 10px;
+        border: $productCardBorder;
+        border-radius: 4px;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .priceWithDiscount,
+    .price,
+    .productName {
+        font-size: $medium-font-size;
+        margin-bottom: 15px;
+    }
+
+    .productName {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+
+        @media #{$m992} {
+            margin-top: 25px;
+        }
+    }
+
+
+    .productCardBody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        height: 90px;
+
+        @media #{$max320} {
+            height: 135px;
+        }
+
+        * {
+            flex: 0 0 100%;
+        }
+
+        .priceWithDiscount {
+            color: $red;
+            font-weight: bold;
+        }
+
+        .oldPrice {
+            text-decoration: line-through;
+        }
+
+        .colors {
+            font-weight: bold;
+            color: $gray;
+            font-size: $small-font-size;
+        }
+
+
+    }
+
+
+
+    button {
+        background-color: $mainColor;
+        color: $white;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        max-width: max-content;
+
+        @media #{$m992} {
+            margin: 15px auto 25px auto;
+        }
+
+    }
+
+}
