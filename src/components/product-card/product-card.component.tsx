@@ -1,13 +1,12 @@
 import IProduct from 'models/IProduct';
+import Image from 'next/image';
+import { FC } from 'react';
 import { calculateDiscount, roundToTwo } from '../../tools/tools';
 import styles from './product-card.module.scss';
-import Image from 'next/image'
-import { FC } from 'react';
 
 export interface Props extends IProduct {
-    columns?: string,
-    showMoreProduct: boolean,
-    showLessProduct: boolean
+    showMoreProduct?: boolean,
+    showLessProduct?: boolean
 }
 
 const ProductCardComponent: FC<Props> = (props) => {
