@@ -1,10 +1,10 @@
 import IProduct from 'models/IProduct';
 import { calculateDiscount, roundToTwo } from '../../tools/tools';
 import styles from './product-card.module.scss';
+import Image from 'next/image'
 
 export interface Props extends IProduct {
     columns?: string,
-    key: any
     showMoreProduct: boolean,
     showLessProduct: boolean
 }

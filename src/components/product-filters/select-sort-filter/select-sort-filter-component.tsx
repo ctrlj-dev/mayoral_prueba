@@ -1,8 +1,6 @@
 import IOptions from "models/IProductsFilters";
-import React, { ChangeEventHandler, FC, InputHTMLAttributes, useState } from "react"
+import { ChangeEventHandler, FC } from "react";
 import styles from './select-sort-filter.module.scss';
-
-
 interface Props {
     id: string,
     options: IOptions[],

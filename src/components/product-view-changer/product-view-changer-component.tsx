@@ -1,6 +1,5 @@
-import ProductSearchFilter from 'components/product-filters/search-filter/product-search-filter.component'
 import { CrossIcon, LineIcon } from 'components/svg-icons/svg-icons.component'
-import { ChangeEventHandler, FC, FormEventHandler, MouseEventHandler } from 'react'
+import { FC, MouseEventHandler } from 'react'
 import styles from './product-view-changer.module.scss'
 
 interface Props {
