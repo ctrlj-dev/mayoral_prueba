@@ -3,6 +3,10 @@
     font-size: $medium-font-size; 
     width: 100%;
 
+    .searchFilter {
+        width: 100%
+    }
+
     svg {
         width: 14px;
         position: relative;

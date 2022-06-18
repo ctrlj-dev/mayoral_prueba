@@ -6,13 +6,14 @@ interface Props {
     options: IOptions[],
     onChange: ChangeEventHandler,
     defaultOption: ESortProductsByPrice
+    className?: string,
 }
 
 const SelectSortFilter: FC<Props> = ({ options, ...props }) => {
-    const { id, onChange, defaultOption } = props
+    const { id, onChange, defaultOption, className } = props
     return (
         <div className={styles.selectSortFilterContainer}>
-            <select defaultValue={defaultOption} id={id} onChange={onChange}>
+            <select className={className} defaultValue={defaultOption} id={id} onChange={onChange}>
                 {options.map((e) => {
                     return <option key={e.option + e.id} value={e.id}>{e.option}</option>
                 })}

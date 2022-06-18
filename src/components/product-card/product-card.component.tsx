@@ -3,12 +3,11 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { calculateDiscount, roundToTwo } from '../../tools/tools';
 import styles from './product-card.module.scss';
-
-export interface Props extends IProduct {
+interface Props extends IProduct {
     changeProductsView?: boolean,
 }
 
-const ProductCardComponent: FC<Props> = (props) => {
+const ProductCard: FC<Props> = (props) => {
     const { name, discount, price, featuredImg, colors, changeProductsView} = props;  
     return (
         <div className={`${styles.productCard} ${changeProductsView && styles.changeProductsView}`}>
@@ -31,4 +30,4 @@ const ProductCardComponent: FC<Props> = (props) => {
         </div>
     )
 }
-export default ProductCardComponent
+export default ProductCard
