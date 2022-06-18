@@ -11,8 +11,8 @@
     &:nth-child(2) {
         @media #{$m992} {
             order: 1;
-            flex: 0 0 60%;
-            max-width: 60%;
+            flex: 0 0 40%;
+            max-width: 40%;
         }
     }
 
@@ -23,8 +23,8 @@
 
         @media #{$m992} {
             order: 2;
-            flex: 0 0 30%;
-            max-width: 30%;
+            flex: 0 0 45%;
+            max-width: 45%;
             display: flex;
             justify-content: flex-end;
             align-items: center;

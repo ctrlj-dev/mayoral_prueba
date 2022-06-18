@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     @media #{$m992} {
-        justify-content: space-evenly;
+        justify-content: space-between;
         border: none;
     }
 }
