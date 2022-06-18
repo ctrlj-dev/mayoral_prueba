@@ -12,7 +12,7 @@ export const calculateDiscount = (price: number, discount: number): number => pr
  * Round number to two decimals.
  * @param price number 
 */
-export const roundToTwo = (price: number): price => Math.round(price * 100) / 100
+export const roundToTwo = (price: number): number => Math.round(price * 100) / 100
 
 /**
  * Checke if discount exist as a object property, and apply it.
