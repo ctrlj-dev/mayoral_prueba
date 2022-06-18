@@ -2,9 +2,9 @@
  * @type {import('next').NextConfig}
  */
 
-const config = {
+module.exports = {
   reactStrictMode: true,
+  images: {
+    domains: ['www.mayoral.com'],
+  },
 };
-
-module.exports =  config
-
