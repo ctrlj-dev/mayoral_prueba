@@ -7,4 +7,5 @@ module.exports = {
   images: {
     domains: ['www.mayoral.com'],
   },
+  env: { BASE_URL: process.env.BASE_URL },
 };
