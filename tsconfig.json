@@ -23,8 +23,9 @@
     ],
     "baseUrl": "./src",
     "incremental": true
-  },
+  },  
   "include": [
+    "./src/**/*",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
