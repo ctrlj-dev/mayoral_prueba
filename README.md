@@ -28,7 +28,9 @@ Functionality to implement:
 
 ## Getting Started 🚀
 
-To launch the project, simply do npm install. Then use the following commands:
+To launch the project, simply do npm install. 
+
+Then use the following commands:
     - npm run dev: Launches the project in a development version.
     - npm run build: Creates a build for production.
     - npm run start: Launches the production build.

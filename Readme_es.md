@@ -28,7 +28,10 @@ Funcionalidad a implementar:
 
 ## Comenzando 🚀
 
-Para lanzar el proyecto, simplemente haz npm install. Luego usa los siguientes comandos:
+Para lanzar el proyecto, simplemente haz npm install.
+
+ Luego usa los siguientes comandos:
+ 
     - npm run dev: Lanza el proyecto en una versión de desarrollo.
     - npm run build: Crea una build para producción.
     - npm run start: Lanza la build de producción.

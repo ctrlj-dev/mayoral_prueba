@@ -37,7 +37,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
         [
             { id: 1, option: "Ordenar por:" },
             { id: 2, option: "Precio ascendente" },
-            { id: 3, option: "Precio descendete" }
+            { id: 3, option: "Precio descendente" }
         ]
     //#endregion Data    
 
