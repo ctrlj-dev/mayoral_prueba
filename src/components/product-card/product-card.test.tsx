@@ -1,7 +1,6 @@
-import ProductCardComponent from './product-card.component';
 import { render } from '@testing-library/react';
 import IProduct from 'models/IProduct';
-import React from 'react';
+import ProductCardComponent from './product-card.component';
 
 describe('ProductCardComponent specs', () => {
     test('It should display all the properties need by the component', () => {
@@ -19,7 +18,7 @@ describe('ProductCardComponent specs', () => {
         };
 
         //Arrange
-        const featuredImg = 'https://json.ctrlj.es/mayoral/img/polo-azul-marino.jpg';
+
         //Act
         const { getByText } = render(
             <ProductCardComponent
