@@ -43,9 +43,9 @@ export const orderProductsByPrice = (a: IProduct, b: IProduct, option: string): 
  * @param data IProduct[] ,
  * @param sortOptions string ,
 */
-export const dataSortSearchResults = (searchTerms: string, data: IProduct[], sortOptions: string) => !searchTerms ? data.concat().sort((a: IProduct, b: IProduct) =>
+export const dataSortSearchResults = (searchTerms: string, dataWithFilter: IProduct[], data: IProduct[], sortOptions: string) => !searchTerms ? data.concat().sort((a: IProduct, b: IProduct) =>
     orderProductsByPrice(a, b, sortOptions)
 ) :
-    data.filter(product =>
+    dataWithFilter.filter(product =>
         product.name.toLowerCase().includes(searchTerms.toLocaleLowerCase())
     ).concat().sort((a, b) => orderProductsByPrice(a, b, sortOptions))
