@@ -10,11 +10,8 @@ export interface Props extends IProduct {
     showLessProduct: boolean
 }
 
-
 const ProductCardComponent: FC<Props> = (props) => {
-
-    const { name, discount, price, featuredImg, colors, showMoreProduct, showLessProduct } = props;
-  
+    const { name, discount, price, featuredImg, colors, showMoreProduct, showLessProduct } = props;  
     return (
         <div className={`${styles.productCard} ${showMoreProduct && styles.moreProductView} ${showLessProduct && styles.lessProductView}`}>
             <div className={styles.productCardContainer}>

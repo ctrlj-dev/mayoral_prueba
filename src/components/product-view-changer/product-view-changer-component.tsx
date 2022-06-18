@@ -8,9 +8,7 @@ interface Props {
 }
 
 const ProductViewChanger: FC<Props> = props => {
-
     const { viewMoreProductEvent, viewLessProductEvent } = props
-
     return (
         <div className={styles.productViewChangerContainer}>
             <button id="showLessProductosbutton" onClick={viewLessProductEvent}><LineIcon/></button>
