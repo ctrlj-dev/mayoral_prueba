@@ -3,32 +3,32 @@ import ProductCardComponent from "components/product-card/product-card.component
 import ProductSearchFilter from "components/product-filters/search-filter/product-search-filter.component";
 import SelectSortFilter from "components/product-filters/select-sort-filter/select-sort-filter-component";
 import ProductViewChanger from "components/product-view-changer/product-view-changer-component";
-import { NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import { useEffect, useState } from 'react';
 import Head from '../../node_modules/next/head';
 import IProduct from '../models/IProduct';
 import styles from '../styles/home.module.scss';
-import { dataSortSearchResults, orderProducts } from "../tools/tools";
+import { dataSortSearchResults } from "../tools/tools";
 
 const endpoint = "https://json.ctrlj.es/mayoral/products.json";
 
 interface Props {
-    datos: IProduct[]
+    data: IProduct[]
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const res = await axios.get(
         ` ${endpoint}`,
     );
-    const datos = res.data;
-    return { props: { datos } };
+    const data = res.data;
+    return { props: { data } };
 }
 
-const HomePage: NextPage<Props> = ({ datos }) => {
+const HomePage: NextPage<Props> = ({ data }) => {
 
     //#region useState
-    const [productsList] = useState<IProduct[]>(datos);
-    const [searchResults, setSearchResults] = useState<IProduct[]>(datos);
+    const [productsList] = useState<IProduct[]>(data);
+    const [searchResults, setSearchResults] = useState<IProduct[]>(data);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [moreProductsView, setMoreProductsView] = useState<boolean>();
     const [lessProductsView, setLessProductsView] = useState<boolean>();
