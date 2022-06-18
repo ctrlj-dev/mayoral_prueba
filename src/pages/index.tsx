@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import Head from '../../node_modules/next/head';
 import IProduct from '../models/IProduct';
 import styles from '../styles/home.module.scss';
-import { orderProducts } from "../tools/tools";
+import { dataSortSearchResults, orderProducts } from "../tools/tools";
 
 const endpoint = "https://json.ctrlj.es/mayoral/products.json";
 
@@ -26,28 +26,29 @@ export const getServerSideProps = async () => {
 
 const HomePage: NextPage<Props> = ({ datos }) => {
 
+    //#region useState
     const [productsList] = useState<IProduct[]>(datos);
     const [searchResults, setSearchResults] = useState<IProduct[]>(datos);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [moreProductsView, setMoreProductsView] = useState<boolean>();
     const [lessProductsView, setLessProductsView] = useState<boolean>();
     const [selectedOption, setSelectedOption] = useState<string>();
+    //#endregion useState
 
+    //#region Data
     const options =
         [
-            { id: 1, option: "Ordenar por precio" },
-            { id: 2, option: "Ascendente" },
-            { id: 3, option: "Descendete" }
+            { id: 1, option: "Ordenar por:" },
+            { id: 2, option: "Precio ascendente" },
+            { id: 3, option: "Precio descendete" }
         ]
+    //#endregion Data    
 
-    const results = !searchTerm ? productsList.concat().sort((a: IProduct, b: IProduct) =>
-        orderProducts(a, b, selectedOption)
-    ) :
-        productsList.filter(product =>
-            product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-        ).concat().sort((a, b) => orderProducts(a, b, selectedOption))
+    //#region Functions
+    const results = dataSortSearchResults(searchTerm, productsList, selectedOption);
+    //#endregion  Functions    
 
-
+     //#region handlers        
     const handleSearch = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSearchTerm(event.target.value);
     };
@@ -65,11 +66,13 @@ const HomePage: NextPage<Props> = ({ datos }) => {
         setLessProductsView(true)
         setMoreProductsView(false)
     }
+    //#endregion handlers
 
+    //#region useEffect
     useEffect(() => {
         setSearchResults(results)
     }, [searchTerm, selectedOption]);
-
+    //#endregion useEffect
 
     return <>
         <Head>

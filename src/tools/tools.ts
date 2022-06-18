@@ -17,3 +17,10 @@ export const orderProducts = (a: IProduct, b: IProduct, option: string): number 
             return 0;
     }
 }
+
+export const dataSortSearchResults = (searchTerms: string, data: IProduct[], sortOptions: string) => !searchTerms ? data.concat().sort((a: IProduct, b: IProduct) =>
+    orderProducts(a, b, sortOptions)
+) :
+    data.filter(product =>
+        product.name.toLowerCase().includes(searchTerms.toLocaleLowerCase())
+    ).concat().sort((a, b) => orderProducts(a, b, sortOptions))
