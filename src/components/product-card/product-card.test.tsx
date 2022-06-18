@@ -1,8 +1,8 @@
-import { getByAltText, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import IProduct from 'models/IProduct';
 import ProductCardComponent from './product-card.component';
 
-describe('ProductCardComponent specs', () => {
+describe('ProductCard specs', () => {
     test('It should display all the properties need by the component', () => {
 
         const product: IProduct = {
