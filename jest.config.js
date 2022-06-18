@@ -7,20 +7,10 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-// Map our typescript aliases to the jest config
-// const moduleNameMapper = Object.keys(compilerOptions.paths).reduce((acc, key) => {
-//   const path = compilerOptions.paths[key];
-//   return {
-//     ...acc,
-//     [`^${key.replace('*', '(.*)')}$`]: path.map((p) => `<rootDir>/src/${p.replace('*', '$1')}`),
-//   };
-// }, {});
-
 // Any custom config you want to pass to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['../jest.setup.js'],
   moduleDirectories: ['node_modules', '<rootDir>/'],
-//   moduleNameMapper,
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['<rootDir>/e2e/'],
   preset: 'ts-jest',
