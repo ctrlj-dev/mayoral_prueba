@@ -27,8 +27,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
     const [productsList] = useState<IProduct[]>(data);
     const [searchResults, setSearchResults] = useState<IProduct[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
-    const [moreProductsView, setMoreProductsView] = useState<boolean>();
-    const [lessProductsView, setLessProductsView] = useState<boolean>();
+    const [changeProductsView, setChangeProductsView] = useState<boolean>(true);
     const [selectedOption, setSelectedOption] = useState<string>();
     //#endregion useState
 
@@ -56,13 +55,11 @@ const HomePage: NextPage<Props> = ({ data }) => {
     };
 
     const handleViewMoreProducts = () => {
-        setMoreProductsView(true)
-        setLessProductsView(false)
+        setChangeProductsView(true)
     }
 
     const handleViewLessProducts = () => {
-        setLessProductsView(true)
-        setMoreProductsView(false)
+        setChangeProductsView(false)
     }
     //#endregion handlers
 
@@ -92,7 +89,6 @@ const HomePage: NextPage<Props> = ({ data }) => {
                 </div>
             </div>
 
-
             <div className="row">
                 {searchResults.map((product) => (
                     <ProductCardComponent
@@ -102,13 +98,13 @@ const HomePage: NextPage<Props> = ({ data }) => {
                         discount={product.discount}
                         colors={product.colors}
                         price={product.price}
-                        showLessProduct={lessProductsView}
-                        showMoreProduct={moreProductsView}
+                        changeProductsView={changeProductsView}
                         featuredImg={product.featuredImg}
                     />
                 )
                 )}
             </div>
+
         </section>
     </>
 
