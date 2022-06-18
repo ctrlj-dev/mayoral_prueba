@@ -7,7 +7,7 @@
     margin-bottom: 15px;
     color: $gray;
 
-    &.moreProductView {
+    &.changeProductsView {
         flex: 0 0 33%;
         max-width: 33%;
 
@@ -29,19 +29,9 @@
         }
     }
 
-    &.lessProductView {
-        flex: 0 0 50%;
-        max-width: 50%;
-
-        @media #{$m992} {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-    }
-
     @media #{$m992} {
-        flex: 0 0 20%;
-        max-width: 20%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 
     .productCardContainer {

@@ -5,14 +5,13 @@ import { calculateDiscount, roundToTwo } from '../../tools/tools';
 import styles from './product-card.module.scss';
 
 export interface Props extends IProduct {
-    showMoreProduct?: boolean,
-    showLessProduct?: boolean
+    changeProductsView?: boolean,
 }
 
 const ProductCardComponent: FC<Props> = (props) => {
-    const { name, discount, price, featuredImg, colors, showMoreProduct, showLessProduct } = props;  
+    const { name, discount, price, featuredImg, colors, changeProductsView} = props;  
     return (
-        <div className={`${styles.productCard} ${showMoreProduct && styles.moreProductView} ${showLessProduct && styles.lessProductView}`}>
+        <div className={`${styles.productCard} ${changeProductsView && styles.changeProductsView}`}>
             <div className={styles.productCardContainer}>
                 <Image priority width={80} height={80} layout='responsive' src={featuredImg} alt={name} />
                 <h2 className={styles.productName}>{name}</h2>
