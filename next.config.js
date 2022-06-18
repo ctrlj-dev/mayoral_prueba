@@ -5,7 +5,9 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['www.mayoral.com'],
+    domains: ['json.ctrlj.es'],
   },
   env: { BASE_URL: process.env.BASE_URL },
 };
+
+
