@@ -17,7 +17,7 @@ const ProductCardComponent: React.FC<Props> = (props) => {
     return (
         <div className={`${styles.productCard} ${showMoreProduct && styles.moreProductView} ${showLessProduct && styles.lessProductView}`}>
             <div className={styles.productCardContainer}>
-                <img src={featuredImg} alt={name} />
+                <Image width={80} height={80} layout='responsive' src={featuredImg} alt={name} />
                 <h2 className={styles.productName}>{name}</h2>
                 <div className={styles.productCardBody}>
                     {discount ?
