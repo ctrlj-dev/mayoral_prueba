@@ -76,8 +76,9 @@ const HomePage: NextPage<Props> = ({ data }) => {
 
     return <>
         <Head>
-            <title>Mayoral</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <title>Mayoral - Prueba técnica Jesús Cortés</title>
+            <meta property="og:title" content="Mayoral - Prueba técnica Jesús Cortés" key="title" />
+            <meta property="og:description" content="Una prueba técnica para entrar a trabajar a Mayoral :)"></meta>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <section className="container">
