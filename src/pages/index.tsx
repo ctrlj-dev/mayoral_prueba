@@ -1,26 +1,23 @@
-import axios from "axios";
 import ProductCardComponent from "components/product-card/product-card.component";
 import ProductSearchFilter from "components/product-filters/search-filter/product-search-filter.component";
 import SelectSortFilter from "components/product-filters/select-sort-filter/select-sort-filter-component";
 import ProductViewChanger from "components/product-view-changer/product-view-changer-component";
+import { ESortProductsByPrice } from "models/IProductsFilters";
 import { GetServerSideProps, NextPage } from "next";
 import { useEffect, useState } from 'react';
+import { getAllProducts } from "services/productsServices";
 import Head from '../../node_modules/next/head';
 import IProduct from '../models/IProduct';
 import styles from '../styles/home.module.scss';
 import { dataSortSearchResults } from "../tools/tools";
-
-const endpoint = "https://json.ctrlj.es/mayoral/products.json";
 
 interface Props {
     data: IProduct[]
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await axios.get(
-        ` ${endpoint}`,
-    );
-    const data = res.data;
+    const res = await getAllProducts();
+    const data = res
     return { props: { data } };
 }
 
@@ -28,13 +25,14 @@ const HomePage: NextPage<Props> = ({ data }) => {
 
     //#region useState
     const [productsList] = useState<IProduct[]>(data);
-    const [searchResults, setSearchResults] = useState<IProduct[]>(data);
+    const [searchResults, setSearchResults] = useState<IProduct[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [moreProductsView, setMoreProductsView] = useState<boolean>();
     const [lessProductsView, setLessProductsView] = useState<boolean>();
     const [selectedOption, setSelectedOption] = useState<string>();
     //#endregion useState
 
+ 
     //#region Data
     const options =
         [
@@ -45,10 +43,10 @@ const HomePage: NextPage<Props> = ({ data }) => {
     //#endregion Data    
 
     //#region Functions
-    const results = dataSortSearchResults(searchTerm, productsList, selectedOption);
+    const results = dataSortSearchResults(searchTerm, searchResults, productsList, selectedOption);
     //#endregion  Functions    
 
-     //#region handlers        
+    //#region handlers        
     const handleSearch = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSearchTerm(event.target.value);
     };
@@ -90,7 +88,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
                 <div className={styles.filterColumn}><ProductSearchFilter className={styles.searchFilter} id={"searchProductInput"} placeholder="Buscar" value={searchTerm} onChange={handleSearch} />
                 </div>
                 <div className={styles.filterColumn}>
-                    <SelectSortFilter id={"selectSortFilter"} options={options} onChange={handleChange} />
+                    <SelectSortFilter defaultOption={ESortProductsByPrice.NOORDER} id={"selectSortFilter"} options={options} onChange={handleChange} />
                 </div>
             </div>
 
@@ -115,7 +113,6 @@ const HomePage: NextPage<Props> = ({ data }) => {
     </>
 
 };
-
 
 export default HomePage;
 
