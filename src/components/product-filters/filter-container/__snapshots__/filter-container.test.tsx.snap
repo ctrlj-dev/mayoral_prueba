@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterContainer specs test to check if container display his children properly 1`] = `
+<DocumentFragment>
+  <div
+    class="filterRow undefined row"
+  >
+    <p>
+      filter1
+    </p>
+    <p>
+      filter2
+    </p>
+  </div>
+</DocumentFragment>
+`;
