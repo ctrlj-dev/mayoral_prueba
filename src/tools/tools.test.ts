@@ -244,9 +244,9 @@ describe('Tests for dataSortSearchResults function. ', () => {
             ]
 
         // Act
-        const resultNoOrderNoSearch = tools.dataSortSearchResults('', products, products, ESortProductsByPrice.NOORDER)
-        const resultOrderASC = tools.dataSortSearchResults('b', products, products, ESortProductsByPrice.ASC)
-        const resultOrderDSC = tools.dataSortSearchResults('blanco', products, products, ESortProductsByPrice.DESC)
+        const resultNoOrderNoSearch = tools.dataSortSearchResults('', products, ESortProductsByPrice.NOORDER)
+        const resultOrderASC = tools.dataSortSearchResults('b', products, ESortProductsByPrice.ASC)
+        const resultOrderDSC = tools.dataSortSearchResults('blanco', products, ESortProductsByPrice.DESC)
 
         const expectedResultOrderASC =
             [{ "colors": ["'rojo'", "'verde'", "'azúl'"], "discount": 20, "featuredImg": "https://json.ctrlj.es/mayoral/img/polo-blanco.jpg", "id": 7, "name": "Polo manga corta estampada blanco", "price": 12.19 },
