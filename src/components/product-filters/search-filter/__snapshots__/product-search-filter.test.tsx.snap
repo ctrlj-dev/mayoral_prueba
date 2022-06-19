@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductCard specs It Should get the value and the OnChange value (should be equals) 1`] = `
+exports[`ProductSearchFilter specs Test if component render correctly 1`] = `
 <DocumentFragment>
   <div
     class="searchContainer"
