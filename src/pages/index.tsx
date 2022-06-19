@@ -1,5 +1,5 @@
 import ProductCard from "components/product-card/product-card.component";
-import FilterContainer from "components/product-filters/filter-container/filter-container.compontent";
+import FilterContainer from "components/product-filters/filter-container/filter-container.component";
 import ProductSearchFilter from "components/product-filters/search-filter/product-search-filter.component";
 import SelectSortFilter from "components/product-filters/select-sort-filter/select-sort-filter-component";
 import ProductViewChanger from "components/product-view-changer/product-view-changer-component";

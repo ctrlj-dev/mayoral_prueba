@@ -3,7 +3,7 @@ import styles from './filter-container.module.scss';
 
 interface Props {
     className?: string
-    children: JSX.Element[],
+    children?: JSX.Element[],
 }
 
 const FilterContainer: FC<Props> = (props) => {
