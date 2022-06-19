@@ -42,7 +42,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
     //#endregion Data    
 
     //#region Functions
-    const results = dataSortSearchResults(searchTerm, searchResults, productsList, selectedOption);
+    const results = dataSortSearchResults(searchTerm, productsList, selectedOption);
     //#endregion  Functions    
 
     //#region handlers        
@@ -50,7 +50,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
         setSearchTerm(event.target.value);
     };
 
-    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedOption(event.target.value);
     };
 
@@ -86,7 +86,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
                     <ProductSearchFilter className={"searchFilter"} id={"searchProductInput"} placeholder="Buscar" value={searchTerm} onChange={handleSearch} />
                 </div>
                 <div className={styles.filterColumn}>
-                    <SelectSortFilter defaultOption={ESortProductsByPrice.NOORDER} id={"selectSortFilter"} options={options} onChange={handleChange} />
+                    <SelectSortFilter defaultOption={ESortProductsByPrice.NOORDER} id={"selectSortFilter"} options={options} onChange={handleSort} />
                 </div>                
             </FilterContainer>
 
