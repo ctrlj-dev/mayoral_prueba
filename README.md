@@ -49,7 +49,7 @@ For the components and structure, we have sought to componentize in folders. All
 to be as reusable as possible. To do this, I have left for props some values such as the data that is passed to each component or
 the event functions, so that each page is the one that decides which values or events to pass. 
 
-I have done some tests with Jest for some components, checking if they render the expected result.
+I have done some tests with Jest for some components, checking if they render the expected result with snapshot.
 
 ## Tools ⚙️
 

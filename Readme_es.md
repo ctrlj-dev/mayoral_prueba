@@ -50,7 +50,7 @@ Para los componentes y la estructura, se ha buscado componentizar en carpetas. T
 que sean lo mas reutilizables posibles. Para ello, he dejado por props algunos valores como los datos que se le pasan a cada componente o
 las funciones de evento, de manera que sea cada página la que decida que valores o eventos debe pasar. 
 
-He realizado algunos test con Jest para algunos componentes, comprobando si renderizan el resultado esperado.
+He realizado algunos test con Jest para algunos componentes, comprobando si renderizan el resultado esperado con snapshot.
 
 ## Tools ⚙️
 
