@@ -1,11 +1,10 @@
-import { render } from '@testing-library/react';
-import { useState } from 'react';
+import { render, screen } from '@testing-library/react';
 import ProductSearchFilter from './product-search-filter.component';
 
 describe('ProductSearchFilter specs', () => {
     test('Test if component render correctly', () => {
         //Act
-        const { getByDisplayValue, asFragment } = render(
+        const screen = render(
                 <ProductSearchFilter
                     id={"1"}
                     onChange={(e) => e.target}
@@ -15,12 +14,11 @@ describe('ProductSearchFilter specs', () => {
 
         )
 
-        const elementValue = getByDisplayValue('test');
+        const elementValue = screen.getByDisplayValue('test');
 
         //Assert
         expect(elementValue).not.toBeNull();
-
-        expect(asFragment()).toMatchSnapshot();
+        expect(screen.asFragment()).toMatchSnapshot();
 
     })
 })
