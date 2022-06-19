@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Sort Filter specs Test to check if components its rendering properly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="component"
+  >
+    <div
+      class="selectSortFilterContainer"
+    >
+      <select
+        id="sortFilter"
+      >
+        <option
+          selected=""
+          value="1"
+        >
+          Ordenar por:
+        </option>
+        <option
+          value="2"
+        >
+          Precio ascendente
+        </option>
+        <option
+          value="3"
+        >
+          Precio descendente
+        </option>
+      </select>
+    </div>
+  </div>
+</DocumentFragment>
+`;

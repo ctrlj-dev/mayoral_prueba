@@ -1,5 +1,5 @@
-import { getAllByRole, render } from '@testing-library/react';
-import { SearchIcon, LineIcon, CrossIcon } from './svg-icons.component';
+import { render } from '@testing-library/react';
+import { CrossIcon, LineIcon, SearchIcon } from './svg-icons.component';
 
 describe('SVG Icons specs', () => {
     test('Test for Icons to check if are render properly', () => {
@@ -48,7 +48,6 @@ describe('SVG Icons specs', () => {
         expect(crossIcon).not.toBeNull();
         expect(crossIcon).toEqual('svg')
         expect(screen.asFragment()).toMatchSnapshot();
-
 
     })
 })

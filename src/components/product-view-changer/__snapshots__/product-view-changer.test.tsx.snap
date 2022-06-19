@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductView Changer specs Test to check if components its rendering properly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="component"
+  >
+    <div
+      class="productViewChangerContainer"
+    >
+      <button
+        id="showLessProductosbutton"
+      >
+        <svg
+          viewBox="0 0 45 45"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="10"
+            width="45"
+            y="17.5"
+          />
+        </svg>
+      </button>
+      <button
+        id="showMoreProductosbutton"
+      >
+        <svg
+          viewBox="0 0 45 45"
+        >
+          <rect
+            height="10"
+            width="45"
+            y="17.5"
+          />
+          <rect
+            height="10"
+            transform="translate(0 45) rotate(-90)"
+            width="45"
+            y="17.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

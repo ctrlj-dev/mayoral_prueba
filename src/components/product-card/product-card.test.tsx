@@ -21,7 +21,7 @@ describe('ProductCard specs', () => {
         //Arrange
 
         //Act
-        const { getByText, getByAltText, asFragment } = render(
+        const screen = render(
             <ProductCardComponent
                 id={product.id}
                 name={product.name}
@@ -31,11 +31,11 @@ describe('ProductCard specs', () => {
                 colors={product.colors}
             />)
 
-        const elementName = getByText('Polo manga corta estampada');
-        const elementDiscount = getByText("(-20%)");
-        const elementPrice = getByText(18.99);
-        const elementFeaturedImg = getByAltText("Polo manga corta estampada");
-        const elemenentcolors = getByText('más colores');
+        const elementName = screen.getByText('Polo manga corta estampada');
+        const elementDiscount = screen.getByText("(-20%)");
+        const elementPrice = screen.getByText(18.99);
+        const elementFeaturedImg = screen.getByAltText("Polo manga corta estampada");
+        const elemenentcolors = screen.getByText('más colores');
 
         //Assert
         expect(elementName).not.toBeNull();
@@ -50,7 +50,7 @@ describe('ProductCard specs', () => {
         expect(elementFeaturedImg.tagName).toEqual('IMG')
         expect(elemenentcolors.tagName).toEqual('P')
 
-        expect(asFragment()).toMatchSnapshot();
+        expect(screen.asFragment()).toMatchSnapshot();
 
     })
 })
