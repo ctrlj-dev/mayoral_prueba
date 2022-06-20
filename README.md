@@ -1,5 +1,7 @@
 # Technical test for Mayoral
 
+##Readme also available in Spanish on Readme_es.md
+
 Technical test for Mayoral, with the following conditions:
 
 |              Desktop              |             Mobile              |
