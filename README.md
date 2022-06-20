@@ -6,7 +6,7 @@ Technical test for Mayoral, with the following conditions:
 | :-------------------------------: | :-----------------------------: |
 | ![Desktop](./.github/desktop.png) | ![Mobile](./.github/mobile.png) |
 
-Layout the attached images and take into account the different cuts on mobile and desktop. The test should be uploaded to a GitHub repository.
+Recreate the attached images and take into account the different cuts on mobile and desktop. The test should be uploaded to a GitHub repository.
 
 Required Technologies/Libraries:
 
@@ -24,8 +24,8 @@ Functionality to implement:
   - Desktop from 4 to 3 elements
   - Mobile from 3 to 2 elements
 - Implement logic and design of a "sort" component (ascending and descending price)
-- Create the unit tests as you see fit
-
+- Create the unit tests that you consider.
+ 
 ## Getting Started 🚀
 
 To launch the project, simply do npm install. 
@@ -45,8 +45,7 @@ The technologies required for the project have been used. React, Typescript and 
 
 ### Components and framework 🔧
 
-For the components and structure, we have sought to componentize in folders. All the components are typed and we have tried to make them as reusable as possible.
-to be as reusable as possible. To do this, I have left for props some values such as the data that is passed to each component or
+For the components and structure, we have sought to componentize in folders. All the components are typed and I've tried to make them as reusable as possible. To do this, I have left for props some values such as the data that is passed to each component or
 the event functions, so that each page is the one that decides which values or events to pass. 
 
 I have done some tests with Jest for some components, checking if they render the expected result with snapshot.
@@ -62,9 +61,9 @@ For CSS styling, SCSS has been used, creating nested structures and global varia
 
 ### API ⌨️
 
-For the API call, it has been separated in a separate file, in the services folder. Both the JSON with the data
+For the API call, it has been created in a separate file, in the services folder. Both the JSON with the data
 as well as the images of the T-shirts are uploaded on a private server, to simulate as much as possible a real call.
-Since there was only one call, we simply used fecth. 
+Since there was only one call, I had used fecth. 
 
 ## Interfaces 📦
 
@@ -76,6 +75,4 @@ I have made some tweaks in the configuration files, for example in jest.config.j
 
 ## To conclude 🎁
 
-It has been tried to keep as much as possible the styles. The images used are from Mayoral's own web site, but they are not the same as the ones
-the same ones that appear in the example. 
-
+It has been tried to recreate as much as possible the original styles. The images used are from Mayoral's own web site.
